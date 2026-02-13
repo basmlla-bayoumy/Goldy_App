@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:goldy_app/core/constants/app_colors.dart';
 import 'package:goldy_app/core/constants/app_strings.dart';
+import 'package:goldy_app/core/routing/routers.dart';
 import 'package:goldy_app/core/widgets/custom_button.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,9 @@ class HomePage extends StatelessWidget {
         children: [
           CustomButton(
             text: AppStrings.gold,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Routers.goldscreen);
+            },
             color: AppColors.goldColor,
           ),
           SizedBox(height: 15),
