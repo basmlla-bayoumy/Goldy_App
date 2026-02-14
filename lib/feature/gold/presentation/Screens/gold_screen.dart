@@ -35,7 +35,12 @@ class GoldScreen extends StatelessWidget {
             if (state is GoldLodingState) {
               return Center(child: CircularProgressIndicator());
             } else if (state is GoldErrorState) {
-              return Center(child: Text(state.errMsg));
+              return Center(
+                child: Text(
+                  state.errMsg,
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+              );
             } else if (state is GoldSuccessState) {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +54,7 @@ class GoldScreen extends StatelessWidget {
                         color: AppColors.goldColor,
                       ),
                       CustomText(
-                        text:  state.goldModel.price.toString(),
+                        text: state.goldModel.price.toString(),
                         color: AppColors.goldColor,
                       ),
                     ],

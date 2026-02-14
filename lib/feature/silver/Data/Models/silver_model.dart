@@ -1,23 +1,22 @@
-class GoldModel {
+class SilverModel {
   final String name;
   final String symobl;
-  final String price;
+  final num price;
   final String updatedAt;
   final String updatedAtReadable;
 
-  GoldModel({
+  SilverModel({
     required this.name,
     required this.symobl,
     required this.price,
     required this.updatedAt,
     required this.updatedAtReadable,
   });
-
-  factory GoldModel.fromJson(Map<String, dynamic> json) {
-    return GoldModel(
+  factory SilverModel.fromJson(Map<String, dynamic> json) {
+    return SilverModel(
       name: json['name'],
       symobl: json['symobl'],
-      price: json['price']?.toString() ?? "",
+      price: json['price'],
       updatedAt: json['updatedAt'],
       updatedAtReadable: json['updatedAtReadable'],
     );
