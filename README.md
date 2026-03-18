@@ -1,6 +1,6 @@
 # goldy_app
 
-## 📌 Overview
+## Overview
 
 This is a simple Flutter application developed as part of a training program to practice the MVVM (Model-View-ViewModel) architecture.
 
